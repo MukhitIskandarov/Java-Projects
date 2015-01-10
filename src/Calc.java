@@ -72,7 +72,7 @@ public class Calc{
 		
 		JFrame frame = new JFrame("My first calculator");
 		frame.setContentPane(panel);
-		frame.setSize(450, 120);
+		frame.setSize(550, 120);
 		frame.setVisible(true);
 		//frame.setResizable(false);
 		MyWindowEventProcessor mw = new MyWindowEventProcessor();
