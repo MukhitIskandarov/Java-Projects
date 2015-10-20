@@ -6,15 +6,33 @@
  */
 public class Calculator {
     /** Результат вычисления*/
-    private int result;
+    private int result = 0;
 
     /**Суммируем аргументы.
-       @param params Аргументы суммирования.
      */
-    public void add(int ... params){
-        for (Integer param : params){
-            this.result += param;
-        }
+    public void add(int first, int second){
+        this.result = first + second;
+    }
+
+
+    /**Вычитаем аргументы.
+     */
+    public void sub(int first, int second){
+        this.result = first - second;
+    }
+
+
+    /**Умножим аргументы.
+     */
+    public void mul(int first, int second){
+        this.result = first * second;
+    }
+
+    /**Делим аргументы.
+     */
+    public void div(int first, int second){
+        if (second != 0)
+            this.result = first / second;
     }
 
     /**Получить результат.

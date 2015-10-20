@@ -9,13 +9,35 @@ public class Calculate {
         try{
             Calculator calculator = new Calculator();
             String  exit = "no";
+
             while (!exit.equals("yes")){
                 System.out.println("Enter first arg : ");
-                String first = scan.next();
+                int first = Integer.valueOf(scan.next());
                 System.out.println("Enter second arg : ");
-                String second = scan.next();
-                calculator.add(Integer.valueOf(first), Integer.valueOf(second));
-                System.out.println("Result = " + calculator.getResult());
+                int second = Integer.valueOf(scan.next());
+                System.out.println("Enter one operation like '+' or '-' or '*' or '/'  : ");
+                String operation = scan.next();
+                switch (operation) {
+                    case "+":
+                        calculator.add(first, second);
+                        System.out.println("Result = " + calculator.getResult());
+                        break;
+                    case "-":
+                        calculator.sub(first, second);
+                        System.out.println("Result = " + calculator.getResult());
+                        break;
+                    case "*":
+                        calculator.mul(first, second);
+                        System.out.println("Result = " + calculator.getResult());
+                        break;
+                    case "/":
+                        calculator.div(first, second);
+                        System.out.println("Result = " + calculator.getResult());
+                        break;
+                    default:
+                        System.out.println("args = [" + args + "]");
+                        break;
+                }
                 calculator.cleanResult();
                 System.out.println("Exit : yes/no");
                 exit = scan.next();
